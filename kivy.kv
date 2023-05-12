@@ -1,0 +1,1329 @@
+
+
+ScreenManagement:   # Define all the classes we will be using in the file.
+    HomePage:
+    Q1:
+    Q3:
+    Q4:
+    Default:
+    Comments:
+    Random_Tips:
+    Main_menu:
+
+
+<HomePage>
+    name: 'home'
+    canvas.before:
+        Rectangle:
+            size:self.size
+            source: '1155379.jpg'
+
+
+    Button:
+        id:con
+        text:'Continue'
+        background_color: 0,0,0,0
+
+        size_hint: 0.2,0.1
+        pos_hint: {"x":0.37,"y":0.10}
+
+        text_size: self.width,None
+        size_hint: 1.5, 0.1
+        height: self.texture_size[1]
+        font_size: self.width/23
+        color: 0.8,0.7,1,1 # light purple
+
+        on_release:app.root.current = 'q1'
+        #on_release:root.decide()
+
+
+
+<Q1>
+    name: 'q1'
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Rectangle:
+                size:self.size
+                source: 'q1.jpg'
+
+        Label:
+
+            text:'\n     First of all, in which age group\n                 do you belong in?\n'
+            text_size: self.width,None
+            size_hint: 1,1.3
+            height: self.texture_size[1]
+            font_size: self.width/15
+            color: 0,0,0
+
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size:self.size
+
+        Button:
+
+            text: 'a. 1-2 years old'
+            text_size: self.width,None
+            halign: 'center'
+            font_size: self.width/18
+
+            background_color: 0,0,0,0
+            color: (0,0,0)
+            on_press:root.pressbtn('a','a','b','c','d','e')
+            on_release:app.root.current = 'q3'
+
+
+
+        Button:
+
+            text: 'b. 3-5 years old'
+            text_size: self.width,None
+            halign: 'center'
+            font_size: self.width/18
+
+            background_color: 0,0,0,0
+            color: (1,0,0)
+            on_press:root.pressbtn('b','a','b','c','d','e')
+            on_release:app.root.current = 'q3'
+
+        Button:
+
+            text: 'c. 6-12 years old'
+            text_size: self.width,None
+            halign: 'center'
+            font_size: self.width/18
+
+            background_color: 0,0,0,0
+            color: (1,0,0)
+            on_press:root.pressbtn('c','a','b','c','d','e')
+            on_release:app.root.current = 'q3'
+
+        Button:
+
+            text: 'd. 13-18 years old'
+            text_size: self.width,None
+            halign: 'center'
+            font_size: self.width/18
+
+            background_color: 0,0,0,0
+            color: (1,0,0)
+            on_press:root.pressbtn('d','a','b','c','d','e')
+            on_release:app.root.current = 'q3'
+
+        Button:
+
+            text: 'e. 18+ years old'
+            text_size: self.width,None
+            halign: 'center'
+            font_size: self.width/18
+
+            background_color: 0,0,0,0
+            color: (1,0,0)
+            on_press:root.pressbtn('e','a','b','c','d','e')
+            on_release:app.root.current = 'q3'
+
+<Q3>
+
+    name: 'q3'
+    canvas:
+        Rectangle:
+            size:self.size
+            source: '1155379.jpg'
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            #pos_hint: {"center_x":.5,"center_y":2}
+            pos_hint:{'center_x':0.5,'y':0.4}
+            size_hint: 0.7,0.4
+
+            text:' \n How many hours of sleep do you\n     approximately get per night?\n'
+            font_size: self.width/12
+
+        ScrollView:
+            do_scroll_y:True
+            do_scroll_x:False
+            size_hint:0.5,0.2
+            pos_hint:{'center_x':0.61,'center_y':0.5}
+            retain_time:100
+            retain_distance:50
+
+            BoxLayout:
+                orientation:'vertical'
+                size_hint_y:None
+                height:1000
+
+                Button:
+
+                    text:'0'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('0')
+                    on_release:app.root.current = 'q4'
+
+                Button:
+                    text:'1'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('1')
+                    on_release:app.root.current = 'q4'
+
+                Button:
+                    text:'2'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('2')
+                    on_release:app.root.current = 'q4'
+
+                Button:
+                    text:'3'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('3')
+                    on_release:app.root.current = 'q4'
+
+                Button:
+                    text:'4'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('4')
+                    on_release:app.root.current = 'q4'
+
+                Button:
+                    text:'5'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('5')
+                    on_release:app.root.current = 'q4'
+
+                Button:
+                    text:'6'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('6')
+                    on_release:app.root.current = 'q4'
+
+                Button:
+                    text:'7'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('7')
+                    on_release:app.root.current = 'q4'
+
+                Button:
+                    text:'8'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('8')
+                    on_release:app.root.current = 'q4'
+
+                Button:
+                    text:'9'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('9')
+                    on_release:app.root.current = 'q4'
+
+                Button:
+                    text:'10'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('10')
+                    on_release:app.root.current = 'q4'
+
+                Button:
+                    text:'11'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('11')
+                    on_release:app.root.current = 'q4'
+
+                Button:
+                    text:'12'
+                    size_hint:0.55,0.43
+                    font_size: self.width/4
+                    on_press:root.q33('12')
+                    on_release:app.root.current = 'q4'
+
+
+        Label:
+            size_hint: 0.5,0.7
+<Q4>
+
+    name: 'q4'
+    BoxLayout:
+        orientation: 'vertical'
+
+        canvas.before:
+            Rectangle:
+                size:self.size
+                source: '1155379.jpg'
+
+        Label:
+
+            text:'\n \n             Lastly, what will your\n                    username be?'
+            size_hint_y:0.7
+
+            text_size: self.width,None
+            height: self.texture_size[1]
+            font_size: self.width/15
+            color: 0,0,0
+
+        Label:
+
+            size_hint_y:2.4
+
+        Label:
+
+            size_hint_y:0.3
+            text: 'Enter Username:'
+            font_size: self.width/21
+
+        BoxLayout:
+            AnchorLayout:
+                TextInput:
+                    id: user_input
+                    multiline:False
+                    pos_y:1.2
+                    size_hint: 0.6,0.5
+                    font_size:self.width/13
+
+        BoxLayout:
+
+            Button:
+
+                id: register
+                size_y:0.5
+                text:'Submit'
+
+                font_size: self.width/21
+
+                on_release:root.register()
+                on_release:app.root.current = 'comments'
+
+        Label:
+
+            size_hint_y:3.2
+
+
+
+<Comments>
+
+    name:'comments'
+    on_enter:root.com()
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            id:sleep
+            size_hint_y:0.3
+            pos_hint:{"center_x":.5,"center_y":1.2}
+
+            text:'\nTotal hours of sleep per week:'
+            font_size: self.width/17
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size:self.size
+        Label:
+            id:extra
+            size_hint_y:0.3
+            pos_hint:{"center_x":.5,"y":1}
+
+            text:'Further comments:'
+            font_size: self.width/17
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size:self.size
+        Label:
+            size_hint: 1,0.4
+            pos_hint:{"center_x":.5,"y":0.8}
+
+
+        Button:
+            size_hint:0.5,0.10
+            pos_hint:{"center_x":.5,"y":.1}
+
+            text:'Continue'
+            font_size: self.width/8
+
+            on_release:app.root.current= 'def'
+        Label:
+            size_hint: 1,0.1
+
+
+#:import Factory kivy.factory.Factory
+<ConfirmPopup@Popup>
+
+    #:import Default main.Default
+
+    auto_dismiss: False
+    size_hint:0.7,0.4
+    pos_hint:{'center_x':0.5,'top':0.7}
+
+    title: '          Enter start and end of sleep'
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            size_hint_y:0.12
+
+        Button:
+            text:'Start:'
+            pos_hint:{'center_x':0.5,'y':0.4}
+            size_hint:0.5,0.3
+            on_release:root.show_time_picker2()
+        Label:
+            id:start
+            text:'n'
+            size_hint_y:0.2
+
+        Button:
+
+            text:'Finish:'
+            pos_hint:{'center_x':0.5,'y':0.2}
+            size_hint:0.5,0.3
+            on_release:root.show_time_picker2()
+        Label:
+            id:finish
+            text:'n'
+            size_hint_y:0.2
+
+        Button:
+
+            text:'Ok'
+            pos_hint:{'center_x':0.5,'y':0.1}
+            size_hint:0.4,0.2
+            on_release:root.dismiss()
+            on_release:
+
+
+<Default>
+    name:'def'
+    on_enter:root.btn_labels_age_based()
+    BoxLayout:
+        orientation:'vertical'
+
+
+
+        GridLayout:
+            canvas:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            rows:2
+            cols:1
+
+            Label:
+                text:"Here's your sleep schedule! "
+                font_size: self.width/19
+                color:0,0,0
+            Label:
+                text:'You can make any changes you want just by clicking\n                      any button in your schedule'
+                font_size: self.width/25
+                color:0,0,0
+
+        GridLayout:
+            canvas:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            cols:8
+            rows:3
+            padding:4
+            spacing:4
+            pos_hint:{'center_x':.5,'center_y':.2}
+            row_force_default:True
+            row_default_height:36
+
+            Label:
+                text:''
+
+            Label:
+                text:'SUNDAY'
+                font_size: self.width/6
+                color: 0,0,0
+            Label:
+                text:'MONDAY'
+                font_size: self.width/6
+                color: 0,0,0
+            Label:
+                text:'TUESDAY'
+                font_size: self.width/6
+                color: 0,0,0
+            Label:
+                text:'WEDNESDAY'
+                font_size: self.width/6
+                color: 0,0,0
+            Label:
+                text:'THURSDAY'
+                font_size: self.width/6
+                color: 0,0,0
+            Label:
+                text:'FRIDAY'
+                font_size: self.width/6
+                color: 0,0,0
+            Label:
+                text:'SATURDAY'
+                font_size: self.width/6
+                color: 0,0,0
+
+            Label:
+
+                text:'NIGHT\nTIME'
+                font_size: self.width/5
+                color: 0,0,0
+
+            Button:
+                id:0
+                text:'12:30-12:00'
+                font_size: self.width/6
+
+                on_press:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(0)
+
+            Button:
+                id:1
+                text:'13:30-15:00'
+                font_size: self.width/6
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(1)
+
+            Button:
+                id:2
+                text:'13:30-15:00'
+                font_size: self.width/6
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(2)
+
+            Button:
+                id:3
+                text:'13:30-15:00'
+                font_size: self.width/6
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(3)
+
+            Button:
+                id:4
+                text:'13:30-15:00'
+                font_size: self.width/6
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(4)
+
+            Button:
+                id:5
+                text:'13:30-15:00'
+                font_size: self.width/6
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(5)
+
+            Button:
+                id:6
+                text:'13:30-15:00'
+                font_size: self.width/6
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(6)
+
+            Label:
+                text:'NAP\nTIME'
+                font_size: self.width/5
+                color: 0,0,0
+            Button:
+                id:7
+                text:'13:30-15:00'
+                font_size: self.width/7
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(7)
+
+            Button:
+                id:8
+                text:'13:30-15:00'
+                font_size: self.width/6
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(8)
+
+            Button:
+                id:9
+                text:'13:30-15:00'
+                font_size: self.width/6
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(9)
+
+            Button:
+                id:10
+                text:'13:30-15:00'
+                font_size: self.width/6
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(10)
+
+            Button:
+                id:11
+                text:'13:30-15:00'
+                font_size: self.width/6
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(11)
+
+            Button:
+                id:12
+                text:'13:30-15:00'
+                font_size: self.width/6
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(12)
+
+            Button:
+                id:13
+                text:'13:30-15:00'
+                font_size: self.width/6
+
+                on_release:Factory.ConfirmPopup().open()
+                on_release:root.pass_label_from_popup(13)
+
+        GridLayout:
+            canvas:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            cols:3
+            rows:
+            padding:4
+            spacing:4
+            pos_hint:{'center_x':.5,'center_y':.2}
+            row_force_default:True
+            row_default_height:36
+
+            Label:
+                text:''
+            Button:
+                text:'Save my schedule'
+                font_size: self.width/8
+
+
+                on_press:root.sighn_label()
+                on_press:root.update_schedule()
+                on_release:app.root.current = 'main_menu'
+                on_release:root.pass_label_from_popup(13)
+            Label:
+                text:''
+
+
+<ConfirmPopup_articles@Popup>
+
+    auto_dismiss:True
+    size_hint:0.8,0.7
+    pos_hint:{'center_x':0.5,'top':1.01}
+    title: '  '
+
+    ScrollView:
+        size_hint_y: .65
+        size_hint_x: .95
+        pos_hint:{'center_x': .5,'y': 0.17}
+        do_scroll_x:False
+        do_scroll_y:True
+        GridLayout:
+            size:(root.width, root.height)
+            size_hint_x:None
+            size_hint_y:None
+            cols:1
+            height:self.minimum_height
+            Button:
+
+                pos_hint:{"center_x":0.1,"center_y":0.5}
+                size_hint:0.5, 0.10
+                markup:True
+                font_size:25
+                text:"Newborn naps"
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Line:
+                        width: 5
+                        rectangle:self.x, self.y, self.width, self.height
+                on_press:
+                    import webbrowser
+                    webbrowser.open('https://www.whattoexpect.com/first-year/child-sleep.aspx')
+            Button:
+
+                pos_hint:{"center_x":0.1,"center_y":0.5}
+                size_hint:0.5, 0.10
+                markup:True
+                font_size:25
+                text:"Baby naps"
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Line:
+                        width: 5
+                        rectangle:self.x, self.y, self.width, self.height
+                on_press:
+                    import webbrowser
+                    webbrowser.open('https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/baby-naps/art-20047421')
+
+            Button:
+
+                pos_hint:{"center_x":0.1,"center_y":0.5}
+                size_hint:0.5, 0.10
+                markup:True
+                font_size:25
+                text:"Sleeping disorders"
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Line:
+                        width: 5
+                        rectangle:self.x, self.y, self.width, self.height
+                on_press:
+                    import webbrowser
+                    webbrowser.open('https://www.sleepfoundation.org/sleep-disorders')
+
+            Button:
+
+                pos_hint:{"center_x":0.1,"center_y":0.5}
+                size_hint:0.5, 0.10
+                markup:True
+                font_size:25
+                text:"Pregnancy & sleep"
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Line:
+                        width: 5
+                        rectangle:self.x, self.y, self.width, self.height
+                on_press:
+                    import webbrowser
+                    webbrowser.open('https://www.sleepfoundation.org/pregnancy')
+
+            Button:
+
+                pos_hint:{"center_x":0.1,"center_y":0.5}
+                size_hint:0.5, 0.10
+                markup:True
+                font_size:25
+                text:"Meditation & sleep"
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Line:
+                        width: 5
+                        rectangle:self.x, self.y, self.width, self.height
+                on_press:
+                    import webbrowser
+                    webbrowser.open('https://www.sleepfoundation.org/meditation-for-sleep')
+            Button:
+
+                pos_hint:{"center_x":0.1,"center_y":0.5}
+                size_hint:0.5, 0.10
+                markup:True
+                font_size:25
+                text:"Tips for sleeping better"
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Line:
+                        width: 5
+                        rectangle:self.x, self.y, self.width, self.height
+                on_press:
+                    import webbrowser
+                    webbrowser.open('')
+
+<Real_bus>
+
+    auto_dismiss:True
+    size_hint:1,0.7
+    pos_hint:{'center_x':0.5,'top':1.01}
+    title: '  '
+    canvas.before:
+        Rectangle:
+            size:self.size
+            source: 'aesthetic-moon-wallpaper-2.webp'
+
+    ScrollView:
+        size_hint_y: .75
+        size_hint_x: .95
+        pos_hint:{'center_x': .5,'y': 0.12}
+        do_scroll_x:False
+        do_scroll_y:True
+
+        GridLayout:
+            cols:1
+
+            spacing:15
+
+            size_hint_y:None
+            height:1000
+
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"1.SAN ROCCO SQUARE LINE 1"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/0015")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"2.MITROPOLITOU METHODIOU"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/501")
+            Button:
+
+                markup:True
+                font_size:20
+                text:"3.SAN ROCCO SQUARE LINE 2A"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/254")
+            Button:
+
+                markup:True
+                font_size:20
+                text:"4.SAN ROCCO SQUARE LINE 2B,8,11,14,15 PORT"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/801")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"5.POTAMOS BRIDGE TO TOWN"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/759")
+
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"6.GKIKA TO TOWN"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/448")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"7.PLATITERA"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open( "https://corfu.citybus.gr/stops/live/403")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"8.GENERAL CLINIC"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/404")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"9.CAPUCCINI"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open( "https://corfu.citybus.gr/stops/live/405")
+            Button:
+
+                markup:True
+                font_size:20
+                text:"10.KAKAROUGKA"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/406")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"11.SOLARI"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/407")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"12.POTAMOS JUNCTION"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/408")
+            Button:
+
+                markup:True
+                font_size:20
+                text:"13.TSORIS"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open( "https://corfu.citybus.gr/stops/live/709")
+            Button:
+
+                markup:True
+                font_size:20
+                text:"14.POTAMOS BRIDGE TO TOWN"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/759")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"15.PSICHIATRIO SQUARE"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/555")
+
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"16.VILLA ROSSA"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/502")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"17.GEORGOPOULOU"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open( "https://corfu.citybus.gr/stops/live/503")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"18.GREEN BUS STATION"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/556")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"19.LIDL"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open( "https://corfu.citybus.gr/stops/live/557")
+            Button:
+
+                markup:True
+                font_size:20
+                text:"20.KTEO"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/558")
+
+                font_size:20
+                text:"21.TRIA GEFIRIA"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open( "https://corfu.citybus.gr/stops/live/506")
+            Button:
+
+                markup:True
+                font_size:20
+                text:"22.KALLITHEA"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/507")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"23.KANALIA JUNCTION TO TOWN"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/1424")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"24.KANALIA JUMBO TO TOWN"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/549")
+            Button:
+
+                markup:True
+                font_size:20
+                text:"25.DAVIOU"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open( "https://corfu.citybus.gr/stops/live/509")
+            Button:
+
+                markup:True
+                font_size:20
+                text:"26.TSAROU"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/510")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"27.PSATHA"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/511")
+
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"28.VRIONI"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/512")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"29.AGATHOU KEP"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open( "https://corfu.citybus.gr/stops/live/513")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"30.ITALIKO"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open("https://corfu.citybus.gr/stops/live/514")
+
+            Button:
+
+                markup:True
+                font_size:20
+                text:"31.ST. PROKOPIS JUNCTION"
+                size_hint:0.5, 0.9
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                on_press:
+                    import webbrowser
+                    webbrowser.open( "https://corfu.citybus.gr/stops/live/515")
+
+
+<ConfirmPopup2@Popup>
+
+    #:import Main_menu main.Main_menu
+
+    auto_dismiss:True
+    size_hint:0.5,0.4
+    pos_hint:{'center_x':0.23,'top':1.01}
+    title: '  '
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Button:
+            id:bt00
+            text:'Sleep Articles'
+            pos_hint:{'center_x':0.5,'y':0.7}
+            size_hint:0.8,0.2
+            on_press:Factory.ConfirmPopup_articles().open()
+
+        Button:
+            text:'Corfu buss stations'
+            pos_hint:{'center_x':0.5,'y':0.4}
+            size_hint:0.8,0.2
+            on_press:Factory.Real_bus().open()
+
+
+
+
+<ConfirmPopup3@Popup>
+
+    #:import Main_menu main.Main_menu
+
+    auto_dismiss:True
+    size_hint:0.7,0.28
+    pos_hint: {"x":0.16, "y":0.09}
+    title: '  '
+
+    FloatLayout:
+        orientation: 'vertical'
+
+        Button:
+            text:'Select Alarm'
+            pos_hint:{'center_x':0.5,'y':0.5}
+            size_hint:0.7,0.3
+
+        Button:
+            text:'Set Alarm'
+            pos_hint:{'center_x':0.5,'y':0.15}
+            size_hint:0.7,0.3
+
+<ConfirmPopup4>:
+
+    #:import Main_menu main.Main_menu
+
+    auto_dismiss:True
+    size_hint:1,0.8
+    pos_hint: {"x":0.00, "y":0.2}
+
+    title: '  '
+    ScrollView:
+        do_scroll_y:True
+        do_scroll_x:False
+        size_hint:0.5,0.7
+        pos_hint:{'center_x':0.61,'center_y':0.5}
+        retain_time:100
+        retain_distance:50
+
+        FloatLayout:
+            orientation: 'vertical'
+            size_hint:1,None
+            height:1000
+
+            Button:
+                id:0
+                text:'View profile 1:'
+                pos_hint: {"x":0, "top":0.95}
+                font_size: self.width/10
+                size_hint:0.4,0.06
+                on_press:root.show_schedule(0)
+
+            Label:
+                id:10
+                size_hint:1,0.45
+                text: '000'
+
+                font_size: self.width/44
+                pos_hint: {"x":.001, "top":0.94}
+
+            Button:
+                id:100
+                text:'Change profile'
+                font_size: self.width/7
+                color:0,0,0
+                pos_hint: {"x":.65, "top":0.95}
+                size_hint:0.3,0.06
+                on_press:root.delete_schedule(0)
+                #on_release:app.root.current= 'q1'
+
+
+
+
+<Random_Tips>
+
+    on_enter:root.tip_of_the_day()
+    name:'tips'
+    FloatLayout:
+        canvas.before:
+            Rectangle:
+                size:self.size
+                source: '278035709_700604871384350_7944949605722969160_n.jpg'
+        Label:
+            id:tip
+            size_hint:0.8,0.07
+            text:'My tip is:'
+            color:0,0,0
+            pos_hint: {"x":.11, "top":.6}
+
+        Button:
+            size_hint:0.2,0.07
+            text:'Got it!'
+            pos_hint: {"x":.41, "top":.3}
+
+            on_press:app.root.current='main_menu'
+
+
+<Main_menu>
+
+    name:'main_menu'
+    FloatLayout:
+        Button:
+            size_hint:0.2,0.1
+            text:'Extras'
+            pos_hint: {"x":0, "top":1}
+            on_release:Factory.ConfirmPopup2().open()
+
+        Button:
+            id:yay
+            size_hint:0.5,0.08
+            text:'Profiles'
+            pos_hint: {"x":0.26, "y":0.1}
+            on_press:Factory.ConfirmPopup4().open()
+
+
+        Button:
+            size_hint:0.5,0.08
+            text:'Alarm'
+            pos_hint: {"x":0.26, "y":0.2}
+            on_release:Factory.ConfirmPopup3().open()
+
+        Button:
+            size_hint:0.5,0.08
+            text:'Tip of the day!'
+            pos_hint: {"x":0.26, "y":0.3}
+            on_release:app.root.current='tips'
